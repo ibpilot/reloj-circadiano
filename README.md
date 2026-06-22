@@ -13,10 +13,6 @@ Los últimos artículos de los STRO sobre el reloj circadiano son muy buenos —
 > *Hasta entonces, giras. Y girar, mientras dure, es lo que significa estar vivo.»*  
 > — Enseñanzas de los STRO
 
----
-## // URL
-
- https://ibpilot.github.io/reloj-circadiano
 
 ## // DESCRIPCIÓN
 
