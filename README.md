@@ -92,5 +92,5 @@ Sin build step · Abre en cualquier navegador
 ---
 
 ```
-fuente // Enseñanzas de los STRO
+fuente // Enseñanzas de los STRO en Junio: La era del sol azul. Serie del relojero
 ```
