@@ -1,12 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=Reloj%20Circadiano.dc.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-<title>El Reloj Circadiano Molecular</title>
+<title>Acceso · Reloj Circadiano Molecular</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: #06070d;
+    color: #eef3fb;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(31,230,214,.018) 2px, rgba(31,230,214,.018) 4px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .wrap {
+    position: relative;
+    z-index: 1;
+    width: min(420px, 92vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .top-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(31,230,214,.08);
+    border: 1px solid rgba(31,230,214,.3);
+    border-bottom: none;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot-r { background: #ff5170; box-shadow: 0 0 8px #ff5170; }
+  .dot-a { background: #ffce3a; box-shadow: 0 0 8px #ffce3a; }
+  .dot-g { background: #1fe6d6; box-shadow: 0 0 8px #1fe6d6; }
+  .top-label { font-size: 10px; letter-spacing: .22em; color: #1fe6d6; margin-left: 6px; }
+  .card {
+    width: 100%;
+    border: 1px solid rgba(31,230,214,.3);
+    background: rgba(8,11,20,.92);
+    padding: 36px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .icon-ring {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: 2px solid rgba(31,230,214,.5);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    animation: ringPulse 3s ease-in-out infinite;
+  }
+  .icon-ring::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 1px solid rgba(31,230,214,.18);
+    animation: ringPulse 3s ease-in-out infinite .6s;
+  }
+  .icon-ring::after {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    border-radius: 50%;
+    border: 1px solid rgba(31,230,214,.07);
+    animation: ringPulse 3s ease-in-out infinite 1.2s;
+  }
+  @keyframes ringPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .4; }
+  }
+  .icon-inner {
+    font-size: 28px;
+    color: #1fe6d6;
+    text-shadow: 0 0 18px #1fe6d6;
+  }
+  .titles { text-align: center; display: flex; flex-direction: column; gap: 6px; }
+  .titles h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: .04em;
+    color: #eef3fb;
+  }
+  .titles p {
+    font-size: 10.5px;
+    letter-spacing: .18em;
+    color: #46566e;
+    text-transform: uppercase;
+  }
+  .form { width: 100%; display: flex; flex-direction: column; gap: 14px; }
+  .input-wrap { position: relative; }
+  .input-label {
+    font-size: 9.5px;
+    letter-spacing: .2em;
+    color: #6f8099;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  input[type="password"] {
+    width: 100%;
+    background: rgba(12,16,26,.8);
+    border: 1px solid rgba(31,230,214,.3);
+    color: #1fe6d6;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 20px;
+    letter-spacing: .28em;
+    padding: 13px 16px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+    caret-color: #1fe6d6;
+  }
+  input[type="password"]:focus {
+    border-color: rgba(31,230,214,.7);
+    box-shadow: 0 0 18px rgba(31,230,214,.15);
+  }
+  input[type="password"].error {
+    border-color: rgba(255,81,112,.7);
+    box-shadow: 0 0 18px rgba(255,81,112,.15);
+    animation: shake .35s ease-in-out;
+  }
+  @keyframes shake {
+    0%,100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+  }
+  .err-msg {
+    font-size: 10px;
+    letter-spacing: .14em;
+    color: #ff5170;
+    text-transform: uppercase;
+    min-height: 14px;
+    margin-top: 4px;
+  }
+  button {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #1fe6d6;
+    background: rgba(31,230,214,.1);
+    color: #1fe6d6;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: .1em;
+    cursor: pointer;
+    transition: background .2s, box-shadow .2s;
+  }
+  button:hover {
+    background: rgba(31,230,214,.2);
+    box-shadow: 0 0 22px rgba(31,230,214,.25);
+  }
+  .footer-note {
+    font-size: 9.5px;
+    letter-spacing: .14em;
+    color: #2a3545;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
+  }
+  /* grid BG dots */
+  .bg-grid {
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(rgba(31,230,214,.07) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+    z-index: 0;
+  }
+</style>
 </head>
 <body>
-<script>window.location.replace('Reloj Circadiano.dc.html');</script>
+<div class="bg-grid"></div>
+<div class="wrap">
+  <div class="top-bar">
+    <div class="dot dot-r"></div>
+    <div class="dot dot-a"></div>
+    <div class="dot dot-g"></div>
+    <span class="top-label">ACCESO RESTRINGIDO · COMUNIDAD STRO</span>
+  </div>
+  <div class="card">
+    <div class="icon-ring">
+      <span class="icon-inner">↺</span>
+    </div>
+    <div class="titles">
+      <h1>El Reloj Circadiano Molecular</h1>
+      <p>Serie W0–W7 · Enseñanzas de los STRO</p>
+    </div>
+    <div class="form">
+      <div>
+        <div class="input-label">// contraseña de acceso</div>
+        <div class="input-wrap">
+          <input type="password" id="pwd" placeholder="········" autocomplete="current-password" autofocus>
+        </div>
+        <div class="err-msg" id="err"></div>
+      </div>
+      <button onclick="check()">ENTRAR ▸</button>
+    </div>
+    <div class="footer-note">fuente // Enseñanzas de los STRO</div>
+  </div>
+</div>
+<script>
+  const KEY = 'stro_auth_v1';
+  const PWD = 'STROLUZ';
+
+  if (localStorage.getItem(KEY) === 'ok') {
+    window.location.replace('Reloj Circadiano.dc.html');
+  }
+
+  document.getElementById('pwd').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') check();
+  });
+
+  function check() {
+    const val = document.getElementById('pwd').value.trim().toUpperCase();
+    const input = document.getElementById('pwd');
+    const err = document.getElementById('err');
+    if (val === PWD) {
+      localStorage.setItem(KEY, 'ok');
+      window.location.replace('Reloj Circadiano.dc.html');
+    } else {
+      input.classList.remove('error');
+      void input.offsetWidth;
+      input.classList.add('error');
+      err.textContent = '⚠ ACCESO DENEGADO · contraseña incorrecta';
+      input.value = '';
+      setTimeout(() => { input.classList.remove('error'); err.textContent = ''; }, 3000);
+    }
+  }
+</script>
 </body>
 </html>
