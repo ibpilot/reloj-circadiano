@@ -222,7 +222,7 @@
 </div>
 <script>
   const KEY = 'stro_auth_v1';
-  const PWD = 'STROLUZ';
+  const HASH = '44e4063f9d835b9282049a40d1fcd1e3e8025931e98fff1f3d00e7f110ab98c5';
 
   if (localStorage.getItem(KEY) === 'ok') {
     window.location.replace('Reloj Circadiano.dc.html');
@@ -232,11 +232,17 @@
     if (e.key === 'Enter') check();
   });
 
-  function check() {
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }
+
+  async function check() {
     const val = document.getElementById('pwd').value.trim().toUpperCase();
     const input = document.getElementById('pwd');
     const err = document.getElementById('err');
-    if (val === PWD) {
+    const hash = await sha256(val);
+    if (hash === HASH) {
       localStorage.setItem(KEY, 'ok');
       window.location.replace('Reloj Circadiano.dc.html');
     } else {
