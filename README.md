@@ -14,6 +14,9 @@ Los últimos artículos de los STRO sobre el reloj circadiano son muy buenos —
 > — Enseñanzas de los STRO
 
 ---
+## // URL
+
+ https://ibpilot.github.io/reloj-circadiano
 
 ## // DESCRIPCIÓN
 
@@ -72,12 +75,6 @@ HTML · CSS · JavaScript vanilla
 Sin frameworks · Sin dependencias npm
 Sin build step · Abre en cualquier navegador
 ```
-
-## // URL
-
- https://<usuario>.github.io/reloj-circadiano/
-
----
 
 ## // ARCHIVOS
 
