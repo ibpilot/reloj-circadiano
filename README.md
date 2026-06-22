@@ -16,7 +16,7 @@ Los últimos artículos de los STRO sobre el reloj circadiano son muy buenos —
 ---
 ## // URL
 
- https://<usuario>.github.io/reloj-circadiano/
+ https://ibpilot.github.io/reloj-circadiano
 
 ## // DESCRIPCIÓN
 
