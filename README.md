@@ -17,7 +17,7 @@ Los últimos artículos de los STRO sobre el reloj circadiano son muy buenos —
 
 ## // DESCRIPCIÓN
 
-Serie interactiva de **8 módulos navegables (W0–W7)** que explica el mecanismo molecular del reloj circadiano. Desde la física de la entropía y la termodinámica de los seres vivos, hasta los bucles de retroalimentación moleculares que gobiernan cada célula de tu cuerpo.
+Serie interactiva de **9 módulos navegables (W0–W8)** que explica el mecanismo molecular del reloj circadiano. Desde la física de la entropía y la termodinámica de los seres vivos, hasta los bucles de retroalimentación moleculares que gobiernan cada célula de tu cuerpo.
 
 Basada íntegramente en las **Enseñanzas de los STRO**. Sin una sola línea inventada fuera de las fuentes.
 
@@ -50,6 +50,18 @@ W6 ── LA DEMOLICIÓN DE PRECISIÓN
 
 W7 ── REV-ERB · LA VENTANA AL METABOLISMO
       Hemo · gases CO y NO · reloj y metabolismo como un solo sistema
+
+W8 ── EL RELEVO DEL AMANECER · LA LUZ Y EL RELOJ
+      Melanopsina · tercer fotorreceptor · viaje del fotón azul 480nm
+      Curva de respuesta de fase · jet lag este/oeste
+      La piel también ve · OPN4/OPN3/OPN5 · neuropsina UVA 380nm
+      El doble fallo moderno · jaula de penumbra · falso amanecer
+
+W8 ── EL RELEVO DEL AMANECER · LA LUZ Y EL RELOJ
+      Melanopsina · tercer fotorreceptor · viaje del fotón azul 480nm
+      Curva de respuesta de fase · jet lag este/oeste
+      La piel también ve · OPN4/OPN3/OPN5 · neuropsina UVA 380nm
+      El doble fallo moderno · jaula de penumbra · falso amanecer
 ```
 
 ---
@@ -57,6 +69,7 @@ W7 ── REV-ERB · LA VENTANA AL METABOLISMO
 ## // CÓDIGO DE COLOR
 
 ```
+■ #4A90D9  FOTÓNICA      melanopsina, fotón azul 480nm
 ■ #AEBFD4  ESTRUCTURAL   CLOCK, BMAL1, NSQ
 ■ #FF5170  REPRESORES    PER, CRY, REV-ERB
 ■ #1FE6D6  ACTIVADORES   ROR
