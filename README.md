@@ -1,6 +1,6 @@
 ```
 ╔═══════════════════════════════════════════════════════════════╗
-║  SYS · RELOJ_CIRCADIANO_MOLECULAR · v2.0                      ║
+║  SYS · RELOJ_CIRCADIANO_MOLECULAR · v2.1                      ║
 ║  ● ONLINE                                                     ║
 ╚═══════════════════════════════════════════════════════════════╝
 ```
@@ -80,6 +80,7 @@ Sin frameworks · Sin dependencias npm
 Sin build step · Abre en cualquier navegador
 ```
 
+---
 
 ## // ARCHIVOS
 
