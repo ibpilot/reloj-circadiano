@@ -14,9 +14,6 @@ Los últimos artículos de los STRO sobre el reloj circadiano son muy buenos —
 > — Enseñanzas de los STRO
 
 ---
-## // URL
-
- https://ibpilot.github.io/reloj-circadiano
 
 ## // DESCRIPCIÓN
 
@@ -76,6 +73,33 @@ Sin frameworks · Sin dependencias npm
 Sin build step · Abre en cualquier navegador
 ```
 
+---
+
+## // USO LOCAL
+
+```bash
+# Opción 1
+npx serve .
+
+# Opción 2
+python3 -m http.server 8080
+```
+
+Abre `http://localhost:8080` en el navegador.
+
+> ⚠ No funciona abriendo el archivo directamente (`file://`) por restricciones CORS.
+
+---
+
+## // GITHUB PAGES
+
+```
+Settings → Pages → Source: main / root → Save
+URL: https://<usuario>.github.io/reloj-circadiano/
+```
+
+---
+
 ## // ARCHIVOS
 
 ```
@@ -89,5 +113,5 @@ Sin build step · Abre en cualquier navegador
 ---
 
 ```
-fuente // Enseñanzas de los STRO en Junio: La era del sol azul. Serie del relojero
+fuente // Enseñanzas de los STRO
 ```
