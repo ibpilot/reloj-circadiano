@@ -13,4 +13,8 @@ npx staticrypt "$SRC" \
 
 # StatiCrypt escribe encrypted/<nombre>; lo publicamos como index.html
 cp "encrypted/${SRC}" index.html
+
+# "Remember me" marcado por defecto (StatiCrypt no tiene flag nativo)
+perl -0pi -e 's/(id="staticrypt-remember" type="checkbox" name="remember")/$1 checked/' index.html
+
 echo "OK -> index.html cifrado ($(wc -c < index.html) bytes)"
