@@ -17,7 +17,7 @@ Los últimos artículos de los STRO sobre el reloj circadiano son muy buenos —
 
 ## // DESCRIPCIÓN
 
-Serie interactiva de **9 módulos navegables (W0–W8)** que explica el mecanismo molecular del reloj circadiano. Desde la física de la entropía y la termodinámica de los seres vivos, hasta los bucles de retroalimentación moleculares que gobiernan cada célula de tu cuerpo.
+Serie interactiva de **10 módulos navegables (W0–W9)** que explica el mecanismo molecular del reloj circadiano. Desde la física de la entropía y la termodinámica de los seres vivos, hasta los bucles de retroalimentación moleculares que gobiernan cada célula de tu cuerpo.
 
 Basada íntegramente en las **Enseñanzas de los STRO**. Sin una sola línea inventada fuera de las fuentes.
 
@@ -56,6 +56,13 @@ W8 ── EL RELEVO DEL AMANECER · LA LUZ Y EL RELOJ
       Curva de respuesta de fase · jet lag este/oeste
       La piel también ve · OPN4/OPN3/OPN5 · neuropsina UVA 380nm
       El doble fallo moderno · jaula de penumbra · falso amanecer
+
+W9 ── EL SEGUNDO RELOJ · EL HÍGADO Y LA COMIDA
+      3 mensajeros: cortisol · temperatura · nervios · + la comida
+      Sincronizador dominante · comer de día/noche · jet-lag a la carta
+      Cadena estómago → páncreas → hígado → músculo · cronofarmacología CYP P450
+      Leptina · POMC · MC4R · encefalopsina · el idioma del hambre
+      Opsinas en órganos internos · Gurwitsch · biofotones · NO → REV-ERB
 ```
 
 ---
