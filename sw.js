@@ -1,8 +1,8 @@
-const CACHE = 'reloj-circadiano-v2.1';
+const CACHE = 'reloj-circadiano-v2.2';
 const ASSETS = [
-  '/',
-  '/Reloj Circadiano.dc.html',
-  '/support.js',
+  './',
+  './index.html',
+  './support.js',
 ];
 
 self.addEventListener('install', e => {
