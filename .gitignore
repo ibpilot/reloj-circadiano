@@ -1,0 +1,11 @@
+# Fuente en claro — NUNCA se commitea (se despliega solo la versión cifrada)
+Reloj Circadiano.dc.html
+uploads/
+encrypted/
+
+# Planes/specs locales
+docs/
+
+# Secretos y basura
+.env
+.DS_Store
