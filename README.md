@@ -83,8 +83,8 @@ W9 ── EL SEGUNDO RELOJ · EL HÍGADO Y LA COMIDA
 
 ```
 HTML · CSS · JavaScript vanilla
-Sin frameworks · Sin dependencias npm
-Sin build step · Abre en cualquier navegador
+Sin frameworks · React se carga en runtime desde unpkg
+Contenido cifrado en cliente con StatiCrypt (AES-256-GCM)
 ```
 
 ---
@@ -93,10 +93,13 @@ Sin build step · Abre en cualquier navegador
 
 ```
 /
-├── index.html                  ← redirección automática
-├── Reloj Circadiano.dc.html    ← app completa · UI + lógica
+├── index.html                  ← app CIFRADA · pantalla de acceso StatiCrypt
 ├── support.js                  ← runtime del motor de componentes
+├── sw.js                       ← service worker
+├── encrypt.sh                  ← genera index.html cifrado desde la fuente
 └── README.md                   ← este archivo
+
+(fuente sin cifrar «Reloj Circadiano.dc.html» → local, no versionada)
 ```
 
 ---
